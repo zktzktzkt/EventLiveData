@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AliveActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_test"
+            style="@style/TextViewTitleStyle"
+            android:text="原生 LiveData" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewSubTitleStyle"
+                android:text="observer" />
+
+            <ImageView
+                android:id="@+id/iv_liveData"
+                style="@style/ImageViewStyle" />
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/TextViewTitleStyle"
+            android:text="EventLiveData" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewSubTitleStyle"
+                android:text="observeAlive" />
+
+            <ImageView
+                android:id="@+id/iv_eventLiveDataObserveLive"
+                style="@style/ImageViewStyle" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewSubTitleStyle"
+                android:text="observeAliveEvent" />
+
+            <ImageView
+                android:id="@+id/iv_eventLiveDataObserveAliveEvent"
+                style="@style/ImageViewStyle" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_state"
+            style="@style/TextViewSubTitleStyle"
+            android:text="当前的关注状态：" />
+
+        <Button
+            android:id="@+id/btn_changeState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="在本页面改变关注状态" />
+
+        <Button
+            android:id="@+id/btn_changeState2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="在其它页面改变关注状态" />
+
+    </LinearLayout>
+
+</ScrollView>

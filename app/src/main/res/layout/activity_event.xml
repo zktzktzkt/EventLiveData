@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EventActivity">
+
+    <TextView
+        style="@style/TextViewTitleStyle"
+        android:text="原生 LiveData" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextViewSubTitleStyle"
+            android:text="observer" />
+
+        <ImageView
+            android:id="@+id/iv_liveData"
+            style="@style/ImageViewStyle" />
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/TextViewTitleStyle"
+        android:text="EventLiveData" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextViewSubTitleStyle"
+            android:text="observe" />
+
+        <ImageView
+            android:id="@+id/iv_eventLiveDataObserve"
+            style="@style/ImageViewStyle" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextViewSubTitleStyle"
+            android:text="observeEvent" />
+
+        <ImageView
+            android:id="@+id/iv_eventLiveDataObserveEvent"
+            style="@style/ImageViewStyle" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_state"
+        style="@style/TextViewSubTitleStyle"
+        android:text="当前的关注状态：" />
+
+    <Button
+        android:id="@+id/btn_changeState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="改变关注状态" />
+
+</LinearLayout>
