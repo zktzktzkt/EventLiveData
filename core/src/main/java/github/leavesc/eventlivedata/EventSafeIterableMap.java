@@ -32,7 +32,7 @@ import java.util.WeakHashMap;
  * @hide
  */
 @RestrictTo(RestrictTo.Scope.LIBRARY_GROUP_PREFIX)
-public class SafeIterableMap<K, V> implements Iterable<Map.Entry<K, V>> {
+public class EventSafeIterableMap<K, V> implements Iterable<Map.Entry<K, V>> {
 
     @SuppressWarnings("WeakerAccess") /* synthetic access */
             Entry<K, V> mStart;
@@ -181,10 +181,10 @@ public class SafeIterableMap<K, V> implements Iterable<Map.Entry<K, V>> {
         if (obj == this) {
             return true;
         }
-        if (!(obj instanceof SafeIterableMap)) {
+        if (!(obj instanceof EventSafeIterableMap)) {
             return false;
         }
-        SafeIterableMap map = (SafeIterableMap) obj;
+        EventSafeIterableMap map = (EventSafeIterableMap) obj;
         if (this.size() != map.size()) {
             return false;
         }

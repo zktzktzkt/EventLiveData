@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="Event"
+        android:text="Event-用于避免粘性事件"
         android:textAllCaps="false" />
 
     <Button
@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="Alive"
+        android:text="Alive-用于扩大 Data 的回调生命周期"
         android:textAllCaps="false" />
 
 </LinearLayout>

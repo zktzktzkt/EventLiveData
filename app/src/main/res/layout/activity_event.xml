@@ -62,13 +62,14 @@
     <TextView
         android:id="@+id/tv_state"
         style="@style/TextViewSubTitleStyle"
+        android:padding="10dp"
         android:text="当前的关注状态：" />
 
     <Button
         android:id="@+id/btn_changeState"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
         android:text="改变关注状态" />
 
 </LinearLayout>

@@ -31,7 +31,7 @@ class EventLiveData<T> {
     private val mDataLock = Any()
 
     private val mObservers =
-        SafeIterableMap<Observer<T>, ObserverWrapper<T>>()
+        EventSafeIterableMap<Observer<T>, ObserverWrapper<T>>()
 
     // how many observers are in active state
     internal var mActiveCount = 0
@@ -151,7 +151,7 @@ class EventLiveData<T> {
 
     /**
      * 在生命周期安全的整体保障上和 LiveData 完全一样
-     * 在 onResume 之后和 onDestroy 之前均能收到 Observer 回调
+     * 在 onResume 时接收 Observer 回调，并在 onDestroy 时自动移除监听
      * 但此方法不会向 Observer 回调旧值，即 EventLiveData 只会向 Observer 回调在调用 observeEvent 之后收到的值
      * @param owner
      * @param observer
@@ -169,7 +169,7 @@ class EventLiveData<T> {
 
     /**
      * 相比 LiveData 会具备更长的生命周期
-     * 在 onCreate 之后和 onDestroy 之前均能收到 Observer 回调
+     * 在 onCreate 之后和 onDestroy 之前均能收到 Observer 回调，并在 onDestroy 时自动移除监听
      * @param owner
      * @param observer
      */
@@ -186,7 +186,7 @@ class EventLiveData<T> {
 
     /**
      * 相比 LiveData 会具备更长的生命周期
-     * 在 onCreate 之后和 onDestroy 之前均能收到 Observer 回调
+     * 在 onResume 时接收 Observer 回调，并在 onDestroy 前自动移除监听
      * 但此方法不会向 Observer 回调旧值，即 EventLiveData 只会向 Observer 回调在调用 observeEvent 之后收到的值
      * @param owner
      * @param observer

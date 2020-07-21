@@ -53,12 +53,13 @@ class AliveActivity : AppCompatActivity() {
 
     private fun checkState() {
         tv_state.text = "当前的关注状态：\nlikeLiveData：${likeLiveData.value}\n" +
-                "likeEventLiveData：${likeAliveLiveData.value}\n" +
-                "改变状态值会退出页面重新进入，观察各个 Observer 的不同表现 "
+                "likeEventLiveData：${likeAliveLiveData.value}\n\n" +
+                "当第一次进入此 Activity 时，三个 Observer 均不会收到数据回调。当在本页面改变了关注状态，退出后再进入 Activity 时，" +
+                "observe、observeAlive 均会收到数据，且 observeAlive 会早于 observe 收到回调\n\n" +
+                "当在其它页面改变了关注状态时，observeAlive 和 observeAliveEvent 均会马上收到数据回调，observe 只会在回到此 Activity 时才收到回调\n"
     }
 
     private fun getDrwId(like: Boolean) =
         if (like) R.drawable.icon_likes else R.drawable.icon_unlike
-
 
 }

@@ -10,6 +10,20 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <Button
+            android:id="@+id/btn_changeState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="在本页面改变关注状态" />
+
+        <Button
+            android:id="@+id/btn_changeState2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="在其它页面改变关注状态" />
+
         <TextView
             android:id="@+id/tv_test"
             style="@style/TextViewTitleStyle"
@@ -68,20 +82,6 @@
             android:id="@+id/tv_state"
             style="@style/TextViewSubTitleStyle"
             android:text="当前的关注状态：" />
-
-        <Button
-            android:id="@+id/btn_changeState"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:text="在本页面改变关注状态" />
-
-        <Button
-            android:id="@+id/btn_changeState2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:text="在其它页面改变关注状态" />
 
     </LinearLayout>
 

@@ -49,8 +49,8 @@ class EventActivity : AppCompatActivity() {
 
     private fun checkState() {
         tv_state.text = "当前的关注状态：\nlikeLiveData：${likeLiveData.value}\n" +
-                "likeEventLiveData：${likeEventLiveData.value}" +
-                "改变状态值会退出页面重新进入，观察各个 Observer 的不同表现 "
+                "likeEventLiveData：${likeEventLiveData.value}\n\n" +
+                "当第一次进入此 Activity 时，三个 Observer 均不会收到数据回调。当改变了关注状态后再进入 Activity 时，observeEvent 不会收到事件通知，从而避免收到旧数据（粘性数据）"
     }
 
     private fun getDrwId(like: Boolean) =
